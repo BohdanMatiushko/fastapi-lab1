@@ -1,0 +1,32 @@
+(fastaplab1-py3.14) PS C:\Users\chybz\PycharmProjects\FastAPlab1> git log --oneline --graph --all
+* 19a6dbc (HEAD -> dev, origin/prod, origin/dev, prod) prices developing new
+* 7d05816 (master) init
+(fastaplab1-py3.14) PS C:\Users\chybz\PycharmProjects\FastAPlab1>
+(fastaplab1-py3.14) PS C:\Users\chybz\PycharmProjects\FastAPlab1>
+(fastaplab1-py3.14) PS C:\Users\chybz\PycharmProjects\FastAPlab1> git log
+commit 19a6dbc68bbeadb3ba37388e5391cbb2bcb35e40 (HEAD -> dev, origin/prod, origin/dev, prod)
+Author: BohdanMatiushko <zerox2007ss@gmail.com>
+Date:   Wed Feb 11 20:58:03 2026 +0200
+
+    prices developing new
+
+commit 7d0581654c09689bca690f258ba1df636454fa93 (master)
+Author: BohdanMatiushko <zerox2007ss@gmail.com>
+Date:   Wed Feb 11 20:51:48 2026 +0200
+
+    init
+
+    (fastaplab1-py3.14) PS C:\Users\chybz\PycharmProjects\FastAPlab1> git reflog
+19a6dbc (HEAD -> feature-1, origin/prod, origin/dev, prod, dev) HEAD@{0}: checkout: moving from dev to feature-1
+19a6dbc (HEAD -> feature-1, origin/prod, origin/dev, prod, dev) HEAD@{1}: checkout: moving from prod to dev
+19a6dbc (HEAD -> feature-1, origin/prod, origin/dev, prod, dev) HEAD@{2}: merge dev: Fast-forward
+7d05816 (master) HEAD@{3}: checkout: moving from dev to prod
+19a6dbc (HEAD -> feature-1, origin/prod, origin/dev, prod, dev) HEAD@{4}: checkout: moving from prod to dev
+7d05816 (master) HEAD@{5}: checkout: moving from dev to prod
+19a6dbc (HEAD -> feature-1, origin/prod, origin/dev, prod, dev) HEAD@{6}: commit: prices developing new
+7d05816 (master) HEAD@{7}: checkout: moving from prod to dev
+7d05816 (master) HEAD@{8}: checkout: moving from dev to prod
+7d05816 (master) HEAD@{9}: checkout: moving from prod to dev
+7d05816 (master) HEAD@{10}: checkout: moving from dev to prod
+7d05816 (master) HEAD@{11}: checkout: moving from master to dev
+7d05816 (master) HEAD@{12}: commit (initial): init
