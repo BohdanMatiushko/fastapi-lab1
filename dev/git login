@@ -182,3 +182,86 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/BohdanMatiushko/fastapi-lab1.git
  	refs/heads/dev:refs/heads/dev	56aa1f5..ff49bfa
 Done
+
+
+14:41:30.879: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false add --ignore-errors -A -- "lab2_doker_scrin/Знімок екрана 2026-02-26 144000.png" "lab2_doker_scrin/Знімок екрана 2026-02-25 231823.png" "lab2_doker_scrin/Знімок екрана 2026-02-25 231845.png" "lab2_doker_scrin/Знімок екрана 2026-02-26 143937.png"
+14:45:21.440: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false reset -- .idea/vcs.xml .idea/inspectionProfiles/profiles_settings.xml .idea/modules.xml .idea/workspace.xml .idea/FastAPlab1.iml
+14:45:21.563: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false add --ignore-errors -A -f -- "lab2_doker_scrin/Знімок екрана 2026-02-26 144000.png" "lab2_doker_scrin/Знімок екрана 2026-02-25 231845.png" "lab2_doker_scrin/Знімок екрана 2026-02-25 231823.png" "lab2_doker_scrin/Знімок екрана 2026-02-26 143937.png"
+14:45:21.723: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false commit -F C:\Users\chybz\AppData\Local\Temp\git-commit-msg-15069522594636823377.txt --
+[dev 19b35fe] doker scrin
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 lab2_doker_scrin/Знімок екрана 2026-02-25 231823.png
+ create mode 100644 lab2_doker_scrin/Знімок екрана 2026-02-25 231845.png
+ create mode 100644 lab2_doker_scrin/Знімок екрана 2026-02-26 143937.png
+ create mode 100644 lab2_doker_scrin/Знімок екрана 2026-02-26 144000.png
+14:45:22.019: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false add --ignore-errors -A -f -- .idea/inspectionProfiles/profiles_settings.xml .idea/vcs.xml .idea/FastAPlab1.iml .idea/modules.xml .idea/workspace.xml
+warning: in the working copy of '.idea/inspectionProfiles/profiles_settings.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.idea/workspace.xml', LF will be replaced by CRLF the next time Git touches it
+14:45:28.299: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false push --progress --porcelain origin refs/heads/dev:dev
+Enumerating objects: 8, done.
+Counting objects:  12% (1/8)
+Counting objects:  25% (2/8)
+Counting objects:  37% (3/8)
+Counting objects:  50% (4/8)
+Counting objects:  62% (5/8)
+Counting objects:  75% (6/8)
+Counting objects:  87% (7/8)
+Counting objects: 100% (8/8)
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects:  14% (1/7)
+Compressing objects:  28% (2/7)
+Compressing objects:  42% (3/7)
+Compressing objects:  57% (4/7)
+Compressing objects:  71% (5/7)
+Compressing objects:  85% (6/7)
+Compressing objects: 100% (7/7)
+Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)
+Writing objects:  28% (2/7)
+Writing objects:  42% (3/7)
+Writing objects:  57% (4/7)
+Writing objects:  71% (5/7)
+Writing objects:  85% (6/7)
+Writing objects: 100% (7/7)
+Writing objects: 100% (7/7), 87.52 KiB | 6.25 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/1)
+remote: Resolving deltas: 100% (1/1)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/BohdanMatiushko/fastapi-lab1.git
+ 	refs/heads/dev:refs/heads/dev	ac1d002..19b35fe
+Done
+14:46:55.811: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false add --ignore-errors -A -- commands.txt
+14:46:57.512: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false reset -- .idea/vcs.xml .idea/inspectionProfiles/profiles_settings.xml .idea/modules.xml .idea/workspace.xml .idea/FastAPlab1.iml
+14:46:57.631: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false add --ignore-errors -A -f -- commands.txt
+14:46:57.752: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false commit -F C:\Users\chybz\AppData\Local\Temp\git-commit-msg-2253119792045278758.txt --
+[dev 26d6ff8] commands.txt docker
+ 1 file changed, 32 insertions(+)
+ create mode 100644 commands.txt
+14:46:58.014: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false add --ignore-errors -A -f -- .idea/inspectionProfiles/profiles_settings.xml .idea/vcs.xml .idea/FastAPlab1.iml .idea/modules.xml .idea/workspace.xml
+warning: in the working copy of '.idea/inspectionProfiles/profiles_settings.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.idea/workspace.xml', LF will be replaced by CRLF the next time Git touches it
+14:47:01.527: [C:\Users\chybz\PycharmProjects\FastAPlab1] git -c credential.helper= -c core.quotepath=false -c log.showSignature=false push --progress --porcelain origin refs/heads/dev:dev
+Enumerating objects: 4, done.
+Counting objects:  25% (1/4)
+Counting objects:  50% (2/4)
+Counting objects:  75% (3/4)
+Counting objects: 100% (4/4)
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)
+Compressing objects:  66% (2/3)
+Compressing objects: 100% (3/3)
+Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)
+Writing objects:  66% (2/3)
+Writing objects: 100% (3/3)
+Writing objects: 100% (3/3), 796 bytes | 398.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/1)
+remote: Resolving deltas: 100% (1/1)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/BohdanMatiushko/fastapi-lab1.git
+ 	refs/heads/dev:refs/heads/dev	19b35fe..26d6ff8
+Done
