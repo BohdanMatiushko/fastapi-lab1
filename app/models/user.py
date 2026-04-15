@@ -13,6 +13,7 @@ class User(Base):
     username: Mapped[str] = mapped_column(String(50), nullable=False, unique=True, index=True)
     email: Mapped[str] = mapped_column(String(255), nullable=False, unique=True, index=True)
     is_active: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    password_hash: Mapped[str | None] = mapped_column(String(255), nullable=True)
 
     # one-to-one: User -> Profile
     profile: Mapped["Profile"] = relationship(
