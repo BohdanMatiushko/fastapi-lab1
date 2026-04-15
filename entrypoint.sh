@@ -5,7 +5,7 @@ HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-8000}"
 
 # 1) Міграції
-#alembic upgrade head
+alembic upgrade head
 
 # 2) Запуск
 if [ "${RELOAD:-0}" = "1" ]; then
