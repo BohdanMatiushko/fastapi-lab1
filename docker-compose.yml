@@ -14,6 +14,23 @@ services:
       timeout: 3s
       retries: 10
 
+  db-test:
+    image: postgres:16
+    container_name: database_test_ZeroX
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - POSTGRES_DB=test_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata-test:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d test_db"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
   api:
     build: .
     container_name: ZeroX_api
@@ -31,3 +48,4 @@ services:
 
 volumes:
   pgdata:
+  pgdata-test:

@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     DATABASE_URL: str  # формат: postgresql+asyncpg://user:pass@db:5432/dbname
+    TEST_DATABASE_URL: str = "postgresql+asyncpg://ZeroX:top1@localhost:5433/test_db"
     ENV: str = "dev"   # dev/prod
     API_V1_PREFIX: str = "/api/v1"
 
