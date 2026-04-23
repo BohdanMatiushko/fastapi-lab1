@@ -17,7 +17,10 @@ async def read_orders(db: AsyncSession = Depends(get_db)):
 
 @router.post("", response_model=OrderOut, status_code=status.HTTP_201_CREATED)
 async def create_new_order(payload: OrderCreate, db: AsyncSession = Depends(get_db)):
-    return await create_order(db, payload)
+    new_order = await create_order(db, payload)
+    from app.metrics import TOTAL_ORDERS
+    TOTAL_ORDERS.inc()
+    return new_order
 
 
 @router.delete("/{order_id}", status_code=status.HTTP_204_NO_CONTENT)

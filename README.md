@@ -571,3 +571,24 @@ pytest -v tests/
 5. **Використано сучасні підходи**: асинхронний ORM (SQLAlchemy 2.0 з Mapped), Dependency Injection, Pydantic v2 для валідації, автоматична генерація API-документації (Swagger/ReDoc).
 
 6. **Додано 100% покриття тестами** за допомогою `pytest` та `httpx`, налаштовано ізольоване середовище тестування (`db-test`) з підміною залежностей FastAPI (`dependency_overrides`).
+
+---
+
+## 13. Практична робота №7: Моніторинг та Спостережуваність (Observability)
+
+У рамках лабораторної роботи №7 було впроваджено комплексний моніторинг проекту:
+- Інтегровано **Prometheus** для збору метрик інфраструктури та додатку.
+- Налаштовано **Grafana** для візуалізації зібраних даних.
+- Додано **cAdvisor** для моніторингу Docker-контейнерів.
+- Додано **postgres-exporter** для відстеження стану бази даних PostgreSQL.
+- Налаштовано `prometheus-fastapi-instrumentator` для збору HTTP-метрик додатку.
+- Створено **кастомні бізнес-метрики** (`total_revenue_dollars_total` та `total_orders_created_total`), які оновлюються при створенні нових замовлень.
+
+### Дашборди Grafana
+Усі налаштовані дашборди доступні за наступними посиланнями (при запущеному `docker-compose`):
+
+- 📊 **[FastAPI Observability](http://localhost:3000/goto/afjwak09hm3ggc?orgId=1)**
+- 🐳 **[Docker Monitoring (cAdvisor)](http://localhost:3000/goto/ffjwakj4q04cgc?orgId=1)**
+- 🐘 **[PostgreSQL Monitoring](http://localhost:3000/goto/afjwal0jdj37kc?orgId=1)**
+- 📈 **[Custom Business Metrics (Revenue & Orders)](http://localhost:3000/goto/afjwalhkklr0gb?orgId=1)**
+- ⚙️ **[Additional Dashboard](http://localhost:3000/goto/dfjwamqtmvta8f?orgId=1)**
