@@ -18,7 +18,10 @@ async def read_items(db: AsyncSession = Depends(get_db)):
 @router.post("", response_model=OrderItemOut, status_code=status.HTTP_201_CREATED)
 async def create_new_item(payload: OrderItemCreate, db: AsyncSession = Depends(get_db)):
     try:
-        return await create_order_item(db, payload)
+        new_item = await create_order_item(db, payload)
+        from app.metrics import TOTAL_REVENUE
+        TOTAL_REVENUE.inc(new_item.qty * new_item.unit_price)
+        return new_item
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 

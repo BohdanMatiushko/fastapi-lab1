@@ -30,7 +30,7 @@ async def test_list_profiles(db_session):
 
 @pytest.mark.asyncio
 async def test_delete_profile(db_session):
-    user = await create_user(db_session, UserCreate(email="del_p@test.com", username="dp"))
+    user = await create_user(db_session, UserCreate(email="del_p@test.com", username="del_p"))
     profile = await create_profile(db_session, ProfileCreate(user_id=user.id, full_name="To Del", phone="1"))
     
     await delete_profile(db_session, profile)
