@@ -6,13 +6,12 @@ async def test_create_user_api(async_client: AsyncClient):
     payload = {
         "username": "test_api_user",
         "email": "api@test.com",
-        "password": "password"
     }
     response = await async_client.post("/api/v1/users/", json=payload)
     if response.status_code == 400: # Could be Email already registered
         pass
     else:
-        assert response.status_code == 200 or response.status_code == 201
+        assert response.status_code == 201
         data = response.json()
         assert "id" in data
         assert data["email"] == "api@test.com"

@@ -8,7 +8,6 @@ async def test_create_order_api(async_client: AsyncClient):
     user_res = await async_client.post("/api/v1/users/", json={
         "username": "api_order_user",
         "email": "api_order@test.com",
-        "password": "pwd"
     })
     user_id = user_res.json()["id"]
 
@@ -29,7 +28,6 @@ async def test_delete_order_api(async_client: AsyncClient):
     user_res = await async_client.post("/api/v1/users/", json={
         "username": "api_del_order",
         "email": "api_del_order@test.com",
-        "password": "pwd"
     })
     
     # Може бути 400 якщо юзер вже існує, але ми робимо кожен раз нового

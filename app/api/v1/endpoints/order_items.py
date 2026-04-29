@@ -20,7 +20,7 @@ async def create_new_item(payload: OrderItemCreate, db: AsyncSession = Depends(g
     try:
         new_item = await create_order_item(db, payload)
         from app.metrics import TOTAL_REVENUE
-        TOTAL_REVENUE.inc(new_item.qty * new_item.unit_price)
+        TOTAL_REVENUE.inc(float(new_item.qty * new_item.unit_price))
         return new_item
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))

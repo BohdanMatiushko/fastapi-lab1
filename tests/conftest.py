@@ -32,7 +32,7 @@ async def db_session(engine) -> AsyncSession:
 
 @pytest_asyncio.fixture
 async def async_client(db_session: AsyncSession) -> AsyncClient:
-    def override_get_db():
+    async def override_get_db():
         yield db_session
 
     def override_get_current_user():

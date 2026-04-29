@@ -17,7 +17,10 @@ async def read_categories(db: AsyncSession = Depends(get_db)):
 
 @router.post("", response_model=CategoryOut, status_code=status.HTTP_201_CREATED)
 async def create_new_category(payload: CategoryCreate, db: AsyncSession = Depends(get_db)):
-    return await create_category(db, payload)
+    try:
+        return await create_category(db, payload)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.delete("/{category_id}", status_code=status.HTTP_204_NO_CONTENT)

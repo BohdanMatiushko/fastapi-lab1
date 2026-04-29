@@ -1,14 +1,12 @@
-from typing import Dict  # Для типізації словника
-
-from app.schemas.user import UserInDB  # Pydantic-модель користувача, як він зберігається в "БД"
+from typing import Any, Dict  # Для типізації словника
 
 
 class FakeUserDB:
     def __init__(self) -> None:
         # _data — це словник, який імітує базу даних.
         # Ключ: int (id користувача)
-        # Значення: UserInDB (модель користувача)
-        self._data: Dict[int, UserInDB] = {}
+        # Значення: dict (дані користувача)
+        self._data: Dict[int, Any] = {}
 
         # _id_seq — лічильник для автоматичної генерації ID
         self._id_seq: int = 0

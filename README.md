@@ -578,7 +578,7 @@ pytest -v tests/
 
 У рамках лабораторної роботи №7 було впроваджено комплексний моніторинг проекту:
 - Інтегровано **Prometheus** для збору метрик інфраструктури та додатку.
-- Налаштовано **Grafana** для візуалізації зібраних даних.
+- Налаштовано **Grafana** для візуалізації зібраних даних (вхід автоматичний).
 - Додано **cAdvisor** для моніторингу Docker-контейнерів.
 - Додано **postgres-exporter** для відстеження стану бази даних PostgreSQL.
 - Налаштовано `prometheus-fastapi-instrumentator` для збору HTTP-метрик додатку.
@@ -587,8 +587,6 @@ pytest -v tests/
 ### Дашборди Grafana
 Усі налаштовані дашборди доступні за наступними посиланнями (при запущеному `docker-compose`):
 
-- 📊 **[FastAPI Observability](http://localhost:3000/goto/afjwak09hm3ggc?orgId=1)**
-- 🐳 **[Docker Monitoring (cAdvisor)](http://localhost:3000/goto/ffjwakj4q04cgc?orgId=1)**
-- 🐘 **[PostgreSQL Monitoring](http://localhost:3000/goto/afjwal0jdj37kc?orgId=1)**
-- 📈 **[Custom Business Metrics (Revenue & Orders)](http://localhost:3000/goto/afjwalhkklr0gb?orgId=1)**
-- ⚙️ **[Additional Dashboard](http://localhost:3000/goto/dfjwamqtmvta8f?orgId=1)**
+- 📊 **[FastAPI Observability](http://localhost:3000/d/fea3x93t76328c/fastapi-observability)** — Метрики додатку (запити, час відповіді).
+- 🐳 **[Docker Monitoring](http://localhost:3000/d/ad6298c/docker-monitoring)** — Стан контейнерів (CPU, RAM, Network).
+- 🐘 **[PostgreSQL Monitoring](http://localhost:3000/d/5474745/postgresql-overview-postgres-exporter)** — Статистика бази даних.

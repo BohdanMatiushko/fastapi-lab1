@@ -15,9 +15,19 @@ async def read_products(db: AsyncSession = Depends(get_db)):
     return await list_products(db)
 
 
+from app.crud.crud_category import get_category
+
 @router.post("", response_model=ProductOut, status_code=status.HTTP_201_CREATED)
 async def create_new_product(payload: ProductCreate, db: AsyncSession = Depends(get_db)):
-    return await create_product(db, payload)
+    # Перевіряємо чи існує категорія
+    category = await get_category(db, payload.category_id)
+    if not category:
+        raise HTTPException(status_code=400, detail=f"Category with id {payload.category_id} not found")
+    
+    try:
+        return await create_product(db, payload)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.delete("/{product_id}", status_code=status.HTTP_204_NO_CONTENT)
