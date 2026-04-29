@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir "poetry==${POETRY_VERSION}"
 COPY pyproject.toml poetry.lock* /app/
 
 # Встановлення залежностей
-RUN poetry install --no-root
+RUN poetry lock && poetry install --no-root
 
 # Копіюємо весь проект
 COPY . /app

@@ -1,11 +1,5 @@
-from fastapi import FastAPI
-import os
-
-app = FastAPI()
-
-@app.get("/")
-def root():
-    return {
-        "status": "ok",
-        "database_url_present": bool(os.getenv("DATABASE_URL")),
-    }
+"""
+Кореневий main.py — перенаправляє на основний додаток.
+Запуск: uvicorn main:app або uvicorn app.main:app
+"""
+from app.main import app  # noqa: F401
